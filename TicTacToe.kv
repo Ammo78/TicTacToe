@@ -1,0 +1,118 @@
+#:kivy 1.0.9
+
+<TicTacToeGame>:
+    canvas:
+        Rectangle:
+            pos: 600,175
+            size: 10, 300
+        Rectangle:
+            pos: 700,175
+            size: 10, 300
+        Rectangle:
+            pos: 500,375
+            size: 300,10
+        Rectangle:
+            pos: 500,275
+            size: 300,10
+    Label:
+        id:L
+        font_size: 50
+        center_x: root.width / 2
+        top: root.top - 80
+        text:""
+    Button:
+        id:b0
+        font_size:60
+        pos:500,50
+        size:300,100
+        text: "Try again"
+        disabled: True
+        on_release: root.try_again()
+    Button:
+        id: b1
+        font_size: 60
+        pos: 499,385
+        size: 101,90
+        disabled: True
+        on_release: 
+            root.change_text(1)
+            root.check_win()
+    Button:
+        id: b2
+        font_size: 60
+        pos: 499,285
+        size: 101,90
+        disabled: True
+        on_release:
+            root.change_text(2)
+            root.check_win()
+    Button:
+        id: b3
+        font_size: 60
+        pos: 499,173
+        size: 101,102
+        disabled: True
+        on_release:
+            root.change_text(3)
+            root.check_win()  
+    Button:
+        id: b4
+        font_size: 60
+        pos: 610,385
+        size: 90,90
+        disabled: True
+        on_release:
+            root.change_text(4)
+            root.check_win()
+    Button:
+        id: b5
+        font_size: 60
+        pos: 610,285
+        size: 90,90
+        disabled: True
+        on_release:
+            root.change_text(5)
+            root.check_win()
+    Button:
+        id: b6
+        font_size: 60
+        pos: 610,173
+        size: 90,102
+        disabled: True
+        on_release:
+            root.change_text(6)
+            root.check_win()
+    Button:
+        id: b7
+        font_size: 60
+        pos: 710,385
+        size: 91,90
+        disabled: True
+        on_release: 
+            root.change_text(7)
+            root.check_win()
+    Button:
+        id: b8
+        font_size: 60
+        pos: 710,285
+        size: 91,90
+        disabled: True
+        on_release:
+            root.change_text(8)
+            root.check_win()
+    Button:
+        id: b9
+        font_size: 60
+        pos: 710,173
+        size: 91,102
+        disabled: True
+        on_release:
+            root.change_text(9)
+            root.check_win()
+    Button:
+        id: b10
+        font_size: 60
+        pos: 500,550
+        size: 300,100
+        text: "Start"
+        on_release: root.start()
